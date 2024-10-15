@@ -17,6 +17,10 @@
         nav {
             background-color: #008CFF;
             overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -41,6 +45,7 @@
             padding: 20px;
             text-align: center;
             background-color: #f0f0f0;
+            margin-top: 60px; /* To account for fixed navbar */
         }
 
         .content.active {
@@ -91,10 +96,10 @@
 <body>
 
 <nav>
-    <a href="#home" onclick="showSection('home')">Home</a>
-    <a href="#change-locale" onclick="showSection('change-locale')">Change Locale</a>
-    <a href="#best-practice" onclick="showSection('best-practice')">Best Practice</a>
-    <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
+    <a href="#home" onclick="showSection('home')">Mother Tongue, Home</a>
+    <a href="#change-locale" onclick="showSection('change-locale')">Mother Tongue, Change Locale</a>
+    <a href="#best-practice" onclick="showSection('best-practice')">Mother Tongue, Best Practice</a>
+    <a href="#privacy-policy" onclick="showSection('privacy-policy')">Mother Tongue, Privacy Policy</a>
 </nav>
 
 <div id="home" class="content active">
