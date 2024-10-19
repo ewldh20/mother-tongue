@@ -197,7 +197,6 @@
     border-radius: 20px;
     font-weight: bold;
     border: 2px solid #005bb5;
-    margin-left: auto; /* Pushes the button to the far right */
 }
 
 .desktop-nav .download-button img {
@@ -205,6 +204,12 @@
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px;
     object-fit: contain; /* Ensure the image fits within the given size */
+}
+
+.desktop-nav .download-button:hover {
+    background-color: inherit; /* Keep the background color the same */
+    color: inherit;            /* Keep the text color the same */
+    cursor: pointer;          
 }
 
 /* Mobile Navigation */
@@ -327,8 +332,8 @@ footer .download-button {
     text-decoration: none;
     border-radius: 20px;
     font-weight: bold;
-/*     border: 2px solid #005bb5;
-    margin-right: 35px; */
+/*     border: 2px solid #005bb5; */
+    margin-right: 25px; 
     position: absolute;
     right: 0;
 }
