@@ -94,16 +94,6 @@
             text-align: center;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #005bb5;
-            color: white;
-            position: fixed;
-            width: -webkit-fill-available;
-            bottom: 0;
-        }
-
         body {
             margin-bottom: 80px; /* To ensure content isn't hidden behind the footer */
         }
@@ -288,6 +278,46 @@
             padding: 20px;
             margin-top: 70px; /* To account for fixed navbar */
         }
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #005bb5;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+}
+
+footer .download-button {
+    display: flex;
+    align-items: center;
+    background-color: #dceaff;
+    color: #005bb5;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #005bb5;
+    margin-right: 35px;
+    position: absolute;
+    right: 0;
+}
+
+footer .download-button i {
+    margin-right: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -487,7 +517,7 @@
     </div>
 
     <!-- Download Button on the right -->
-    <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button" style="display: flex; align-items: center; background-color: #dceaff; color: #005bb5; text-decoration: none; padding: 5px 15px; border-radius: 10px; font-weight: bold; border: 2px solid #005bb5; margin-right: 15px; position: absolute; right: 0; height: -webkit-fill-available;">
+    <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
         <!-- Icon (Using FontAwesome for a download icon) -->
         <i class="fas fa-download" style="margin-right: 10px;"></i>
         Download
