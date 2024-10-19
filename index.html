@@ -170,15 +170,43 @@
             font-size: 1rem;
             line-height: 1.4;
         }
+
+         /* Responsive styling */
+        @media (min-width: 768px) {
+            nav a {
+                display: inline-block; /* Show links for larger screens */
+                padding: 14px 20px;
+            }
+
+            .hamburger {
+                display: none; /* Hide hamburger on larger screens */
+            }
+
+            .nav-links {
+                display: flex; /* Show links on larger screens */
+                flex-direction: row;
+            }
+        }
+
+        /* Mobile menu toggling */
+        .mobile-nav.active {
+            display: flex;
+        }
+        
     </style>
 </head>
 <body>
-<nav style="display: flex; align-items: center;">
-    <div style="display: flex; align-items: center;">
-        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo" style="vertical-align: middle; margin-right: 10px;">
-        <span style="font-weight: bold; color: white; margin-right: 20px; margin-left: 10px;">Mother Tongue</span>
+<nav>
+    <div class="logo-container">
+        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo">
+        <span class="logo-text">Mother Tongue</span>
     </div>
-    <div>
+
+    <!-- Hamburger icon for mobile -->
+    <button class="hamburger" onclick="toggleMobileMenu()">&#9776;</button>
+
+    <!-- Navigation links -->
+    <div class="nav-links mobile-nav">
         <a href="#home" onclick="showSection('home')">Welcome</a>
         <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
         <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
