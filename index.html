@@ -123,6 +123,52 @@
             border-radius: 8px;
             text-align: center;
         }
+
+        /* Styling for the instruction boxes */
+        .instruction-box {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .instruction-box:nth-child(odd) {
+            background-color: #f5f8ff; /* Match site theme */
+        }
+
+        .instruction-box:nth-child(even) {
+            background-color: #dceaff; /* Lighter version */
+        }
+
+        .instruction-step {
+            background-color: #005bb5; /* Theme color */
+            color: white;
+            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .instruction-content {
+            flex: 1;
+        }
+
+        .instruction-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .instruction-description {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -139,98 +185,93 @@
     <h1>Welcome to Mother Tongue</h1>
     <p>Mother Tongue is an AI-driven language practice tool designed to help you unlock your full language potential through real conversations. While apps like Duolingo are great for learning words, true fluency comes from speaking. Scientifically, regular conversation practice builds neural pathways in your brain, helping you think in the language rather than just memorizing vocabulary.</p>
     <p>I created this app because I used to spend a fortune on tutors every week to practice speaking. Now, with Mother Tongue, I’ve developed a super simple, efficient, and much more affordable solution that can be fit around your schedule.</p>
-    <p>You can select from many languages, including:</p>
-    
-    <ul class="language-list">
-        <li>English</li>
-        <li>Mandarin</li>
-        <li>Spanish</li>
-        <li>French</li>
-        <li>Italian</li>
-        <li>Portuguese</li>
-        <li>Japanese</li>
-        <li>Arabic</li>
-        <li>Turkish</li>
-        <li>Danish</li>
-        <li>Swedish</li>
-        <li>Finnish</li>
-        <li>Norwegian</li>
-        <li>Greek</li>
-        <li>Polish</li>
-        <li>German</li>
-        <li>Thai</li>
-        <li>Hindi</li>
-        <li>Urdu</li>
-    </ul>
-    <p>All other languages are also available - we are just in testing mode for them.</p>
 </div>
 
-<div id="change-locale" class="content">
-    <h1>How to Change the Locale on Your Alexa</h1>
-    <p>For the best experience with Mother Tongue, you should set your Alexa device to the relevant locale of the language you want to practice. This helps ensure proper conversation flow as Alexa will listen for the relevant language. You can change the locale by following the steps below:</p>
-
-    <ol>
-        <li>Open the Alexa app on your smartphone or tablet.</li>
-        <li>Tap on the **Devices** icon at the bottom of the screen.</li>
-        <li>Select the **Echo & Alexa** option from the top menu.</li>
-        <li>Choose the Alexa device you are using for Mother Tongue.</li>
-        <li>Scroll down and tap on **Language**.</li>
-        <li>Select the language you want to practice, for example, French (Français) or Spanish (Español).</li>
-        <li>Save your changes. Alexa will now be set to listen and speak in the chosen language.</li>
-    </ol>
-
-    <p>The great news is, you can change your locale as many times as you want, making it easy to switch back after your language session.</p>
-</div>
-
+<!-- Best Practice Section -->
 <div id="best-practice" class="content">
     <h1>Best Practice for Using Mother Tongue</h1>
-    <p>Using Mother Tongue is simple and effective for improving your language fluency. Here’s how to get started:</p>
-    <ol>
-        <li>Start the Alexa skill by saying, <strong>"Alexa, open Mother Tongue."</strong></li>
-        <li>Alexa will then ask, <em>"What language would you like to practice?"</em> Respond with the language you want to practice, such as <strong>“Francais”</strong> (for French) or <strong>“Espanol”</strong> (for Spanish).</li>
-        <li>Next, Alexa will ask, <em>"For how long would you like to practice?"</em> Respond with the time in the relevant language. For example, say <strong>"Cinq minutes"</strong> (for five minutes) if you're practicing French, or <strong>"Diez minutos"</strong> (for ten minutes) if you're practicing Spanish. You can choose any duration between 1 and 15 minutes.</li>
-        <li>Alexa will then ask, <em>"What topic would you like to discuss?"</em> Again, reply in the language you're practicing. For instance, you could say <strong>"Cuisine"</strong> (for cooking) in French or <strong>"Preparándose para la cama"</strong> (for getting ready for bed) in Spanish.</li>
-        <li>Finally, start speaking! Alexa will guide the conversation in the selected language. You can converse on the chosen topic in real-time with the AI.</li>
-    </ol>
-    <p>Make sure to reply in the language of the locale you set (for example, French if you're practicing French, Spanish if you're practicing Spanish). This ensures a smoother interaction with the AI.</p>
-    <p>Don’t forget: you can change the locale in your Alexa device as many times as you need, so feel free to switch between different languages whenever you like.</p>
+    <div class="instruction-box">
+        <div class="instruction-step">1</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Start the Alexa skill</div>
+            <div class="instruction-description">Say, <strong>"Alexa, open Mother Tongue."</strong></div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">2</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Choose a language</div>
+            <div class="instruction-description">Alexa will ask, <em>"What language would you like to practice?"</em> Respond with a language, such as <strong>“Francais”</strong> or <strong>“Espanol”</strong>.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">3</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Set the duration</div>
+            <div class="instruction-description">Alexa will ask, <em>"For how long would you like to practice?"</em> Respond with a time in the relevant language.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">4</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Choose a topic</div>
+            <div class="instruction-description">Alexa will ask, <em>"What topic would you like to discuss?"</em> Respond with a topic in the language you're practicing.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">5</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Begin speaking!</div>
+            <div class="instruction-description">Speak in the selected language and let Alexa guide the conversation in real-time.</div>
+        </div>
+    </div>
 </div>
 
-    <div id="privacy-policy" class="content">
-        <h1>Privacy Policy</h1>
-        <p>At <strong>Mother Tongue</strong>, we are committed to protecting your privacy. We value the trust you place in us and aim to be transparent in our data handling practices. The information collected through your use of this service will be treated with care and stored securely.</p>
-    
-        <h2>Data Collection:</h2>
-        <ul>
-            <li><strong>Personal Data:</strong> We may collect personal information, such as your device data, language preferences, and usage patterns. This data is used to improve the user experience, deliver personalized content, and ensure the optimal performance of the service.</li>
-            <li><strong>Conversation Data:</strong> We reserve the right to store conversation-related data to enhance the accuracy of AI responses and improve future interactions. Rest assured, any data we collect will be stored securely and handled with strict confidentiality.</li>
-        </ul>
-    
-        <h2>Data Security:</h2>
-        <p>We take the necessary technical and organizational measures to store and protect your personal and conversation-related data. These measures are in place to safeguard your information from unauthorized access, disclosure, or loss.</p>
-    
-        <h2>Data Usage:</h2>
-        <ul>
-            <li>Data collected may be used for improving the performance and accuracy of our language services.</li>
-            <li>Your information will not be shared with third parties unless required by law or necessary for maintaining the service.</li>
-        </ul>
-    
-        <p>By using <strong>Mother Tongue</strong>, you agree to the collection and use of your data as outlined in this privacy policy. We are committed to continuously improving our privacy practices and may update this policy accordingly.</p>
+<!-- Change Locale Section -->
+<div id="change-locale" class="content">
+    <h1>How to Change the Locale on Your Alexa</h1>
+    <div class="instruction-box">
+        <div class="instruction-step">1</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Open the Alexa app</div>
+            <div class="instruction-description">Go to the Alexa app on your smartphone or tablet.</div>
+        </div>
     </div>
-
-
-<div id="terms-of-use" class="content">
-    <h1>Terms of Use</h1>
-    <p>By using the Mother Tongue skill, you agree to the following terms and conditions:</p>
-    <ul>
-        <li>Mother Tongue is intended for personal, non-commercial use only.</li>
-        <li>The skill uses AI to provide language learning conversations, which may occasionally contain inaccuracies or errors. We are not responsible for any mistakes in translations or language guidance provided.</li>
-        <li>User data, such as conversation inputs, may be temporarily processed to improve service quality, but no personal data will be stored permanently.</li>
-        <li>Mother Tongue is suitable for users aged 13 and above. Parental guidance is recommended for younger users.</li>
-        <li>We reserve the right to modify or discontinue the service at any time without notice.</li>
-        <li>Users must ensure their Alexa device is set to the correct locale for the language they wish to practice for optimal performance.</li>
-        <li>By using Mother Tongue, you acknowledge that the AI-generated responses may not always be perfect or fully accurate, and it is intended as a learning aid rather than a certified language course.</li>
-    </ul>
+    <div class="instruction-box">
+        <div class="instruction-step">2</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Go to Devices</div>
+            <div class="instruction-description">Tap on the <strong>Devices</strong> icon at the bottom of the screen.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">3</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Select Echo & Alexa</div>
+            <div class="instruction-description">Choose the <strong>Echo & Alexa</strong> option from the top menu.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">4</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Choose your device</div>
+            <div class="instruction-description">Select the Alexa device you're using for Mother Tongue.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">5</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Scroll to Language</div>
+            <div class="instruction-description">Scroll down and tap on <strong>Language</strong>.</div>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="instruction-step">6</div>
+        <div class="instruction-content">
+            <div class="instruction-title">Select the language</div>
+            <div class="instruction-description">Select the language you want to practice, for example, French or Spanish.</div>
+        </div>
+    </div>
 </div>
 
 <footer>
