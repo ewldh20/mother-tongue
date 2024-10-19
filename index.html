@@ -163,48 +163,55 @@
         }
 
     /* Desktop Navigation */
-    .desktop-nav {
-        background-color: #005bb5;
-        display: flex;
-        align-items: center;
-    /*     justify-content: space-between; */
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    
-    .desktop-nav a, .desktop-nav span {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    .desktop-nav a:hover {
-        background-color: #003f7f;
-    }
-    
-    .desktop-nav .download-button {
-        display: flex;
-        align-items: center;
-        background-color: #dceaff;
-        color: #005bb5;
-        text-decoration: none;
-        padding: 5px 20px;
-        border-radius: 20px;
-        font-weight: bold;
-        border: 2px solid #005bb5;
-    }
-    
-    .desktop-nav .download-button img {
-        width: 40px; /* Set the width to an appropriate size */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 10px;
-        object-fit: contain; /* Ensure the image fits within the given size */
-    }
+.desktop-nav {
+    background-color: #005bb5;
+    display: flex;
+    justify-content: space-between; /* Adjusts space between logo + links and button */
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.desktop-nav a, .desktop-nav span {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.desktop-nav a:hover {
+    background-color: #003f7f;
+}
+
+.desktop-nav .menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav .download-button {
+    display: flex;
+    align-items: center;
+    background-color: #dceaff;
+    color: #005bb5;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #005bb5;
+    margin-left: auto; /* Ensures the download button is pushed to the right */
+}
+
+.desktop-nav .download-button img {
+    width: 40px; /* Set the width to an appropriate size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    object-fit: contain; /* Ensure the image fits within the given size */
+}
+
     
     .desktop-nav .download-button:hover {
         background-color: #dceaff; /* Keep the background color the same */
@@ -363,7 +370,7 @@
 </head>
 <body>
 <!-- Larger Navigation (Desktop) -->
-<nav class="desktop-nav">
+<!-- <nav class="desktop-nav">
     <div style="display: flex; align-items: center;">
         <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
         <span style="padding-left: 5px;">Mother Tongue</span>
@@ -378,7 +385,27 @@
     <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
         <img src="alexa-logo.webp" alt="Download Icon">
     </a>
+</nav> -->
+
+
+<!-- Larger Navigation (Desktop) -->
+<nav class="desktop-nav">
+    <div style="display: flex; align-items: center;">
+        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
+        <span style="padding-left: 5px;">Mother Tongue</span>
+    </div>
+    <div class="menu-items">
+        <a href="#home" onclick="showSection('home')">Welcome</a>
+        <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
+        <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
+        <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
+        <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
+    </div>
+    <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
+        <img src="alexa-logo.webp" alt="Download Icon">
+    </a>
 </nav>
+
 
 <!-- Mobile Navigation -->
 <nav class="mobile-nav">
