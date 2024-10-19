@@ -526,9 +526,9 @@
         });
         const sectionToShow = document.getElementById(sectionId);
         sectionToShow.classList.add('active');
-    
+        
         // Scroll adjustment to account for the fixed header
-        const headerHeight = document.querySelector('.desktop-nav').offsetHeight;
+        const headerHeight = document.querySelector('.desktop-nav')?.offsetHeight || 0; // Ensure this works even if desktop-nav is not present
         window.scrollTo({
             top: sectionToShow.offsetTop - headerHeight,
             behavior: 'smooth'  // Adds smooth scrolling effect
