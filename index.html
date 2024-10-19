@@ -486,10 +486,18 @@
     }
 </script>
 <script>
-    function toggleMobileMenu() {
+function toggleMobileMenu() {
+    const mobileNavLinks = document.getElementById('mobile-nav-links');
+    mobileNavLinks.classList.toggle('active');
+}
+
+// Hide menu when a link is clicked
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
         const mobileNavLinks = document.getElementById('mobile-nav-links');
-        mobileNavLinks.classList.toggle('active');
-    }
+        mobileNavLinks.classList.remove('active'); // Hide the menu
+    });
+});
 </script>
 </body>
 </html>
