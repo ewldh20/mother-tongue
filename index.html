@@ -480,8 +480,18 @@
     </ul>
 </div>
 
-<footer>
-    © 2024 Mother Tongue. All Rights Reserved.
+<footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #005bb5; color: white; position: fixed; width: 100%; bottom: 0;">
+    <!-- Copyright on the left -->
+    <div>
+        © 2024 Mother Tongue. All Rights Reserved.
+    </div>
+
+    <!-- Download Button on the right -->
+    <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button" style="display: flex; align-items: center; background-color: #f0f0f0; color: #005bb5; text-decoration: none; padding: 10px 20px; border-radius: 30px; font-weight: bold; border: 2px solid #005bb5;">
+        <!-- Icon (Using FontAwesome for a download icon) -->
+        <i class="fas fa-download" style="margin-right: 10px;"></i>
+        Download Mother Tongue
+    </a>
 </footer>
 
 <script>
@@ -535,5 +545,7 @@
         });
     }
 </script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </body>
 </html>
