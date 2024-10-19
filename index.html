@@ -110,6 +110,19 @@
             color: #005bb5;
             margin-top: 15px;
         }
+
+        .language-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+            gap: 10px; /* Adjust the gap between the columns */
+        }
+
+        .language-list li {
+            background-color: #e0e7ff; /* Light background for language items */
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -127,7 +140,8 @@
     <p>Mother Tongue is an AI-driven language practice tool designed to help you unlock your full language potential through real conversations. While apps like Duolingo are great for learning words, true fluency comes from speaking. Scientifically, regular conversation practice builds neural pathways in your brain, helping you think in the language rather than just memorizing vocabulary.</p>
     <p>I created this app because I used to spend a fortune on tutors every week to practice speaking. Now, with Mother Tongue, I’ve developed a super simple, efficient, and much more affordable solution that can be fit around your schedule.</p>
     <p>You can select from many languages, including:</p>
-    <ul>
+    
+    <ul class="language-list">
         <li>English</li>
         <li>Mandarin</li>
         <li>Spanish</li>
