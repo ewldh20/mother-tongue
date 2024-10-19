@@ -7,6 +7,12 @@
     <title>Mother Tongue</title>
     <meta name="description" content="Mother Tongue is an AI-based language aid designed to help you become fluent in languages through conversation. It supports English, Mandarin, Spanish, French, Italian, Portuguese, Japanese, Arabic, and more.">
     <meta name="keywords" content="AI language aid, learn languages, conversation practice, fluency, English, Mandarin, Spanish, French, Italian, Portuguese, Japanese, Arabic, Turkish, Danish, Swedish, Finnish, Norwegian, Greek, Polish, German, Thai, Hindi, Urdu">
+    <script defer>
+        function toggleMobileMenu() {
+            const mobileNavLinks = document.getElementById('mobile-nav-links');
+            mobileNavLinks.classList.toggle('active');
+        }
+    </script>
     <style>
         .logo {
             width: 37px;
@@ -25,7 +31,7 @@
             text-align: left;
         }
 
-        nav {
+/*         nav {
             background-color: #005bb5;
             overflow: hidden;
             position: fixed;
@@ -50,7 +56,7 @@
         nav a:hover {
             background-color: #003f7f;
             color: white;
-        }
+        } */
 
         .content {
             display: none;
@@ -171,50 +177,134 @@
             line-height: 1.4;
         }
 
-         /* Responsive styling */
-        @media (max-width: 768px) {
-            nav .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #005bb5;
-            }
+/* Desktop Navigation */
+.desktop-nav {
+    background-color: #005bb5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            nav .nav-links.active {
-                display: flex;
-            }
+.desktop-nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-            nav .hamburger {
-                display: block;
-            }
-        }
+.desktop-nav a:hover {
+    background-color: #003f7f;
+}
 
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: #005bb5;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: space-around;
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-nav .hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    display: block;
+}
+
+.mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #005bb5;
+}
+
+.mobile-nav-links a {
+    color: white;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mobile-nav-links.active {
+    display: flex;
+}
+
+/* Media Query for Mobile Navigation */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-nav-links {
+        display: none; /* Initially hidden */
+    }
+
+    .mobile-nav-links.active {
+        display: flex; /* Display flex on toggle */
+    }
+}
         .content {
             padding: 20px;
             margin-top: 70px; /* To account for fixed navbar */
         }
-        
     </style>
 </head>
 <body>
-<nav>
-    <div class="logo-container">
-        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo">
+<!-- Larger Navigation (Desktop) -->
+<nav class="desktop-nav">
+    <div style="display: flex; align-items: center;">
+        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
         <span>Mother Tongue</span>
     </div>
-    <div class="nav-links">
+    <div>
         <a href="#home" onclick="showSection('home')">Welcome</a>
         <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
         <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
         <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
         <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
     </div>
-    <button class="hamburger" onclick="toggleMenu()">
+</nav>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav">
+    <div style="display: flex; align-items: center;">
+        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
+        <span>Mother Tongue</span>
+    </div>
+    <button class="hamburger" onclick="toggleMobileMenu()">
         <span></span>
         <span></span>
         <span></span>
     </button>
 </nav>
+
+<!-- Mobile Links that will toggle with the hamburger menu -->
+<div class="mobile-nav-links" id="mobile-nav-links">
+    <a href="#home" onclick="showSection('home')">Welcome</a>
+    <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
+    <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
+    <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
+    <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
+</div>
 
 <div id="home" class="content active">
     <h1>Welcome to Mother Tongue</h1>
