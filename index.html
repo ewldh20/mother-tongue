@@ -517,5 +517,23 @@
         }
     });
 </script>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add('active');
+    
+        // Scroll adjustment to account for the fixed header
+        const headerHeight = document.querySelector('.desktop-nav').offsetHeight;
+        window.scrollTo({
+            top: sectionToShow.offsetTop - headerHeight,
+            behavior: 'smooth'  // Adds smooth scrolling effect
+        });
+    }
+</script>
 </body>
 </html>
