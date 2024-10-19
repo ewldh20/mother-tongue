@@ -7,12 +7,6 @@
     <title>Mother Tongue</title>
     <meta name="description" content="Mother Tongue is an AI-based language aid designed to help you become fluent in languages through conversation. It supports English, Mandarin, Spanish, French, Italian, Portuguese, Japanese, Arabic, and more.">
     <meta name="keywords" content="AI language aid, learn languages, conversation practice, fluency, English, Mandarin, Spanish, French, Italian, Portuguese, Japanese, Arabic, Turkish, Danish, Swedish, Finnish, Norwegian, Greek, Polish, German, Thai, Hindi, Urdu">
-    <script defer>
-        function toggleMobileMenu() {
-            const mobileNavLinks = document.getElementById('mobile-nav-links');
-            mobileNavLinks.classList.toggle('active');
-        }
-    </script>
     <style>
         .logo {
             width: 37px;
@@ -473,6 +467,11 @@
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
-
+<script>
+    function toggleMobileMenu() {
+        const mobileNavLinks = document.getElementById('mobile-nav-links');
+        mobileNavLinks.classList.toggle('active');
+    }
+</script>
 </body>
 </html>
