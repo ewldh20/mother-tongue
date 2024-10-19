@@ -162,194 +162,204 @@
             line-height: 1.4;
         }
 
-/* Desktop Navigation */
-.desktop-nav {
-    background-color: #005bb5;
-    display: flex;
-    align-items: center;
-/*     justify-content: space-between; */
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.desktop-nav a, .desktop-nav span {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.desktop-nav a:hover {
-    background-color: #003f7f;
-}
-
-.desktop-nav .download-button {
-    display: flex;
-    align-items: center;
-    background-color: #dceaff;
-    color: #005bb5;
-    text-decoration: none;
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    border: 2px solid #005bb5;
-}
-
-.desktop-nav .download-button img {
-    width: 40px; /* Set the width to an appropriate size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
-    object-fit: contain; /* Ensure the image fits within the given size */
-}
-
-.desktop-nav .download-button:hover {
-    background-color: inherit; /* Keep the background color the same */
-    color: inherit;            /* Keep the text color the same */
-    cursor: pointer;          
-}
-
-/* Mobile Navigation */
-.mobile-nav {
-    display: none;
-    background-color: #005bb5;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.mobile-nav span {
-    color: white;
-    padding: 10px;
-    text-align: left;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.mobile-nav .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30px; /* Adjust the width of the button */
-    height: 24px; /* Adjust the height for proper spacing between lines */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px; /* Adjust margin if needed */
-}
-
-.mobile-nav .hamburger span {
-    width: 100%; /* Full width for each line */
-    height: 3px; /* Thickness of each line */
-    background-color: white; /* Color of the lines */
-    display: block;
-    border-radius: 2px; /* Adds rounded corners to the lines */
-}
-
-.mobile-nav-links {
-    display: none;
-    flex-direction: column;
-/*     background-color: #005bb5; */
-    background-color: #4C8EDB;
-    position: absolute; /* Make it positioned relative to the viewport */
-    top: 60px; /* Adjust this value to ensure it appears below the fixed header */
-    width: 100%; /* Make sure it takes up the full width of the screen */
-    z-index: 999; /* Ensure it stays on top of other content */
-    padding: 10px 0;
-}
-
-.mobile-nav-links a, mobile-nav-links span {
-    color: white;
-    padding: 10px;
-    text-align: left;
-    text-decoration: none;
-/*     font-weight: bold; */
-    font-size: 18px;
-}
-
-.mobile-nav-links.active {
-    display: flex;
-}
-
-/* Media Query for Mobile Navigation */
-@media (max-width: 768px) {
+    /* Desktop Navigation */
     .desktop-nav {
-        display: none;
-    }
-
-    .mobile-nav {
+        background-color: #005bb5;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        width: -webkit-fill-available;
+    /*     justify-content: space-between; */
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
-
+    
+    .desktop-nav a, .desktop-nav span {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .desktop-nav a:hover {
+        background-color: #003f7f;
+    }
+    
+    .desktop-nav .download-button {
+        display: flex;
+        align-items: center;
+        background-color: #dceaff;
+        color: #005bb5;
+        text-decoration: none;
+        padding: 5px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: 2px solid #005bb5;
+    }
+    
+    .desktop-nav .download-button img {
+        width: 40px; /* Set the width to an appropriate size */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px;
+        object-fit: contain; /* Ensure the image fits within the given size */
+    }
+    
+    .desktop-nav .download-button:hover {
+        background-color: inherit; /* Keep the background color the same */
+        color: inherit;            /* Keep the text color the same */
+        cursor: pointer;          
+    }
+    
+    /* Mobile Navigation */
+    .mobile-nav {
+        display: none;
+        background-color: #005bb5;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .mobile-nav span {
+        color: white;
+        padding: 10px;
+        text-align: left;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+    .mobile-nav .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30px; /* Adjust the width of the button */
+        height: 24px; /* Adjust the height for proper spacing between lines */
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px; /* Adjust margin if needed */
+    }
+    
+    .mobile-nav .hamburger span {
+        width: 100%; /* Full width for each line */
+        height: 3px; /* Thickness of each line */
+        background-color: white; /* Color of the lines */
+        display: block;
+        border-radius: 2px; /* Adds rounded corners to the lines */
+    }
+    
     .mobile-nav-links {
-        display: none; /* Initially hidden */
+        display: none;
+        flex-direction: column;
+    /*     background-color: #005bb5; */
+        background-color: #4C8EDB;
+        position: absolute; /* Make it positioned relative to the viewport */
+        top: 60px; /* Adjust this value to ensure it appears below the fixed header */
+        width: 100%; /* Make sure it takes up the full width of the screen */
+        z-index: 999; /* Ensure it stays on top of other content */
+        padding: 10px 0;
     }
-
+    
+    .mobile-nav-links a, mobile-nav-links span {
+        color: white;
+        padding: 10px;
+        text-align: left;
+        text-decoration: none;
+    /*     font-weight: bold; */
+        font-size: 18px;
+    }
+    
     .mobile-nav-links.active {
-        display: flex; /* Display flex on toggle */
+        display: flex;
     }
-}
-        .content {
-            padding: 20px;
-            margin-top: 70px; /* To account for fixed navbar */
+    
+    /* Media Query for Mobile Navigation */
+    @media (max-width: 768px) {
+        .desktop-nav {
+            display: none;
         }
-
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #005bb5;
-    color: white;
-    position: fixed;
-    width: -webkit-fill-available;
-    bottom: 0;
-}
-
-footer .copyright {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px;
-}
-
-footer .download-button {
-    display: flex;
-    align-items: center;
-    background-color: #dceaff;
-    color: #005bb5;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-/*     border: 2px solid #005bb5; */
-    margin-right: 25px; 
-    position: absolute;
-    right: 0;
-}
-
-/* footer .download-button i {
-    scale: 15%;
-} */
-
-footer .download-button img {
-    width: 40px; /* Set the width to an appropriate size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
-    object-fit: contain; /* Ensure the image fits within the given size */
-}
-
+    
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: -webkit-fill-available;
+        }
+    
+        .mobile-nav-links {
+            display: none; /* Initially hidden */
+        }
+    
+        .mobile-nav-links.active {
+            display: flex; /* Display flex on toggle */
+        }
+    }
+            .content {
+                padding: 20px;
+                margin-top: 70px; /* To account for fixed navbar */
+            }
+    
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #005bb5;
+        color: white;
+        position: fixed;
+        width: -webkit-fill-available;
+        bottom: 0;
+    }
+    
+    footer .copyright {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px;
+    }
+    
+    footer .download-button {
+        display: flex;
+        align-items: center;
+        background-color: #dceaff;
+        color: #005bb5;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+    /*     border: 2px solid #005bb5; */
+        margin-right: 25px; 
+        position: absolute;
+        right: 0;
+    }
+    
+    /* footer .download-button i {
+        scale: 15%;
+    } */
+    
+    footer .download-button img {
+        width: 40px; /* Set the width to an appropriate size */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px;
+        object-fit: contain; /* Ensure the image fits within the given size */
+    }
+    
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRXEE4WB24"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-MRXEE4WB24');
+    </script>
 </head>
 <body>
 <!-- Larger Navigation (Desktop) -->
