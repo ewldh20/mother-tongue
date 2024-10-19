@@ -173,16 +173,18 @@
     </style>
 </head>
 <body>
-<nav>
+<nav style="display: flex; align-items: center; justify-content: space-between;">
     <div style="display: flex; align-items: center;">
         <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo" style="vertical-align: middle; margin-right: 10px;">
         <span style="font-weight: bold; color: white; margin-right: 20px;">Mother Tongue</span>
     </div>
-    <a href="#home" onclick="showSection('home')">Welcome</a>
-    <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
-    <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
-    <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
-    <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
+    <div>
+        <a href="#home" onclick="showSection('home')">Welcome</a>
+        <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
+        <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a>
+        <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
+        <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
+    </div>
 </nav>
 
 <div id="home" class="content active">
