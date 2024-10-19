@@ -187,6 +187,26 @@
     background-color: #003f7f;
 }
 
+.desktop-nav .download-button {
+    display: flex;
+    align-items: center;
+    background-color: #dceaff;
+    color: #005bb5;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #005bb5;
+    margin-left: auto; /* Pushes the button to the far right */
+}
+
+.desktop-nav .download-button img {
+    width: 40px; /* Set the width to an appropriate size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    object-fit: contain; /* Ensure the image fits within the given size */
+}
+
 /* Mobile Navigation */
 .mobile-nav {
     display: none;
@@ -341,6 +361,10 @@ footer .download-button img {
         <a href="#privacy-policy" onclick="showSection('privacy-policy')">Privacy Policy</a>
         <a href="#terms-of-use" onclick="showSection('terms-of-use')">Terms of Use</a>
     </div>
+    <a href="#" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
+        <img src="alexa-logo.webp" alt="Download Icon">
+        Download
+    </a>
 </nav>
 
 <!-- Mobile Navigation -->
