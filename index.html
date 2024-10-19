@@ -242,6 +242,10 @@
     display: none;
     flex-direction: column;
     background-color: #005bb5;
+    position: absolute; /* Make it positioned relative to the viewport */
+    top: 60px; /* Adjust this value to ensure it appears below the fixed header */
+    width: 100%; /* Make sure it takes up the full width of the screen */
+    z-index: 999; /* Ensure it stays on top of other content */
 }
 
 .mobile-nav-links a, mobile-nav-links span {
@@ -487,18 +491,28 @@
     }
 </script>
 <script>
-function toggleMobileMenu() {
-    const mobileNavLinks = document.getElementById('mobile-nav-links');
-    mobileNavLinks.classList.toggle('active');
-}
-
-// Hide menu when a link is clicked
-document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-    link.addEventListener('click', function() {
+    function toggleMobileMenu() {
         const mobileNavLinks = document.getElementById('mobile-nav-links');
-        mobileNavLinks.classList.remove('active'); // Hide the menu
+        mobileNavLinks.classList.toggle('active');
+    }
+    
+    // Hide menu when a link is clicked
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileNavLinks = document.getElementById('mobile-nav-links');
+            mobileNavLinks.classList.remove('active'); // Hide the menu
+        });
     });
-});
+    
+    // Close mobile menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        const mobileNavLinks = document.getElementById('mobile-nav-links');
+        const isClickInside = mobileNavLinks.contains(event.target) || event.target.closest('.hamburger');
+        
+        if (!isClickInside) {
+            mobileNavLinks.classList.remove('active'); // Hide the menu
+        }
+    });
 </script>
 </body>
 </html>
