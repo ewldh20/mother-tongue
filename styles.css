@@ -319,6 +319,7 @@
         transform: translateX(-50%);
         padding: 5px;
         display: flex;
+        align-items: center;
     }
     
     footer .download-button {
