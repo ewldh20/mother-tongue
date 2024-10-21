@@ -313,7 +313,7 @@
         }
      
         .copyright {
-            display: block;
+            display: block !important;
         }
 
         .footer-links {
