@@ -311,6 +311,14 @@
             font-size: smaller;
         }
      
+        .copyright {
+            display: block;
+        }
+
+        .footer-links {
+            display: block;
+        }
+     
     }
             .content {
                 padding: 20px;
