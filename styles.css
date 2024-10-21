@@ -343,4 +343,21 @@
         height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure the image fits within the given size */
     }
+
+    .footer-links {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+}
+
     
