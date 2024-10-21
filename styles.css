@@ -306,6 +306,11 @@
         .footer-banner {
             min-width: 375px; /* Set min-width for footer banner */
         }
+
+        footer {
+            font-size: smaller;
+        }
+     
     }
             .content {
                 padding: 20px;
