@@ -301,6 +301,7 @@
      
          .footer-links a {
             margin: 0px; /* Remove margins for mobile view */
+            min-width: 100px;
         }
         
         .footer-banner {
