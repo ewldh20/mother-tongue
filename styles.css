@@ -316,7 +316,7 @@
         }
 
         .footer-links {
-            display: block;
+            display: flex;
         }
      
     }
