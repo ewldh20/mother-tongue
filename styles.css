@@ -294,6 +294,18 @@
         .mobile-nav-links.active {
             display: flex; /* Display flex on toggle */
         }
+     
+         .footer-links {
+            display: flex;
+         }
+     
+         .footer-links a {
+            margin: 0px; /* Remove margins for mobile view */
+        }
+        
+        .footer-banner {
+            min-width: 375px; /* Set min-width for footer banner */
+        }
     }
             .content {
                 padding: 20px;
