@@ -222,8 +222,8 @@
 
     
     .desktop-nav .download-button:hover {
-        background-color: var(--instruction-even-background-color); /* Keep the background color the same */
-        color: inherit;            /* Keep the text color the same */
+        /* background-color: var(--instruction-even-background-color);
+        color: inherit;            */
         cursor: pointer;          
     }
     
