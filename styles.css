@@ -95,7 +95,6 @@
         }
 
         .desktop-nav a, .desktop-nav span, .download-button {
-            font-family: var(--secondary-font);
             color: var(--desktop-header-font-color);
             text-decoration: none;
             font-weight: bold;
