@@ -19,9 +19,9 @@
     /* Font Variables */
     --primary-font: 'Nunito Sans', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
-    --heading-font: 'Quicksand', sans-serif;
+    --heading-font: 'Fredoka', sans-serif;
     --header-font: 'Fredoka', sans-serif;
-    --header-font-size: 2rem;
+    --header-font-size: 2.5rem;
     --body-font-size: 20px;
     --heading-font-size: 3rem;
     --subheading-font-size: 2rem;
@@ -31,7 +31,8 @@
             width: 75px;
             height: 75px;
             border-radius: 50%;
-            float: left;
+            float: left;    
+            transform: rotate(-30deg);
         }
         
         body {
@@ -332,7 +333,7 @@
     .content {
         min-height: 100vh; /* Each section takes up the full viewport height */
         padding: 0 20px;
-        margin-top: 77px; 
+        margin-top: 79px; 
         text-align: left;
     }
     
