@@ -1,15 +1,15 @@
 /* Color Variables */
 :root {
-    --primary-color: #005bb5;
-    --primary-hover-color: #003f7f;
+    --primary-color: #4C8EDB;
+    --primary-hover-color: #4C8EDB;
     --text-color: #333;
     --background-color: white;
     --language-background-color: #e0e7ff;
     --instruction-odd-background-color: #f5f8ff;
     --instruction-even-background-color: #dceaff;
     --button-border-color: #005bb5;
-    --footer-background-color: #005bb5;
-    --footer-text-color: white;
+    --footer-background-color: white;
+    --footer-text-color: #1CAFF6;
     --mobile-nav-background: #4C8EDB;
     --desktop-header-color: white;
     --desktop-header-font-color: #1CAFF6;
@@ -192,7 +192,7 @@
         }
         
         .desktop-nav a:hover {
-            background-color: var(--primary-hover-color);
+            border-bottom: 2px solid var(--primary-hover-color);
         }
         
         .desktop-nav .menu-items {
