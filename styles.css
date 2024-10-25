@@ -11,6 +11,9 @@
     --footer-background-color: #005bb5;
     --footer-text-color: white;
     --mobile-nav-background: #4C8EDB;
+    --desktop-header-color: white;
+    --desktop-header-font-color: #1CAFF6;
+    --desktop-border-color: ##E5E5E5;
 }
 
 .logo {
@@ -168,7 +171,8 @@
 
         /* Desktop Navigation */
         .desktop-nav {
-            background-color: var(--primary-color);
+            background-color: var(--desktop-header-color);
+            border-bottom: 2px solid var(--desktop-border-color);
             display: flex;
             justify-content: space-between; /* Adjusts space between logo + links and button */
             align-items: center;
@@ -181,7 +185,7 @@
         }
         
         .desktop-nav a, .desktop-nav span {
-            color: var(--background-color);
+            color: var(--desktop-header-font-color);
             padding: 14px 20px;
             text-decoration: none;
             font-weight: bold;
