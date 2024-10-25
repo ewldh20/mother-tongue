@@ -350,6 +350,7 @@
         width: -webkit-fill-available;
         bottom: 0;
         border-top: 2px solid var(--desktop-border-color);
+        height: 30px;
     }
     
     footer .copyright {
@@ -357,8 +358,11 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 5px;
-        display: flex;
         align-items: center;
+    }
+
+    .copyright div {
+        padding: 10px 0;
     }
     
     footer .download-button {
