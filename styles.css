@@ -44,15 +44,10 @@
         }
 
         .content {
-            display: none;
             padding: 20px;
             margin-top: 60px; /* To account for fixed navbar */
             text-align: left;
         }
-
-        .content.active {
-            display: block;
-        } 
 
         h1 {
             font-family: var(--heading-font);
