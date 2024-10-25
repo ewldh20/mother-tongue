@@ -334,11 +334,13 @@
         }
      
     }
-            .content {
-                padding: 0 20px;
-                margin-top: 70px; /* To account for fixed navbar */
-            }
-    
+
+    .content {
+        min-height: 100vh; /* Each section takes up the full viewport height */
+        padding: 0 20px;
+        margin-top: 60px; /* To account for the fixed header */
+        text-align: left;
+    }
     
     footer {
         display: flex;
