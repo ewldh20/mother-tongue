@@ -279,9 +279,9 @@
     
     /* Media Query for Mobile Navigation */
     @media (max-width: 768px) {
-        .desktop-nav {
+        /* .desktop-nav {
             display: none;
-        }
+        } */
     
         .mobile-nav {
             display: flex;
