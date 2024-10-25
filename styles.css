@@ -356,6 +356,7 @@
         position: fixed;
         width: -webkit-fill-available;
         bottom: 0;
+        border-top: 2px solid var(--desktop-border-color);
     }
     
     footer .copyright {
