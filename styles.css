@@ -330,7 +330,7 @@
     }
 
     .content {
-        min-height: 100vh; /* Each section takes up the full viewport height */
+        min-height: calc(100vh - 140px); /* Each section takes up the full viewport height */
         padding: 0 20px;
         margin-top: 79px; 
         text-align: left;
