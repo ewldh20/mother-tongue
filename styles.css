@@ -20,6 +20,7 @@
     --primary-font: 'Nunito Sans', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
     --heading-font: 'Quicksand', sans-serif;
+    --header-font: 'Fredoka One';
     --header-font-size: 2rem;
     --body-font-size: 20px;
     --heading-font-size: 3rem;
@@ -173,6 +174,7 @@
             width: 90%;
             z-index: 1000;
             font-size: var(--header-font-size);
+            font-family: var(--header-font);
         }
         
         .desktop-nav a, .desktop-nav span {
