@@ -341,7 +341,7 @@
      
     }
             .content {
-                padding: 20px;
+                padding: 0 20px;
                 margin-top: 70px; /* To account for fixed navbar */
             }
     
