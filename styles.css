@@ -96,6 +96,7 @@
 
         .desktop-nav a, .desktop-nav span, .download-button {
             color: var(--desktop-header-font-color);
+            font-weight: 500;
             text-decoration: none;
             font-weight: bold;
         }
