@@ -215,6 +215,7 @@
     .mobile-nav {
         display: none;
         background-color: var(--mobile-nav-background);
+        border-bottom: 2px solid var(--desktop-border-color);
         padding: 10px;
         position: fixed;
         top: 0;
