@@ -1,5 +1,6 @@
-/* Color Variables */
+
 :root {
+    /* Color Variables */
     --primary-color: #1CAFF6;
     --primary-hover-color: #1CAFF6;
     --text-color: #333333;
@@ -14,6 +15,14 @@
     --desktop-header-color: white;
     --desktop-header-font-color: #1CAFF6;
     --desktop-border-color: #E5E5E5;
+
+    /* Font Variables */
+    --primary-font: 'Nunito Sans', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --heading-font: 'Quicksand', sans-serif;
+    --body-font-size: 20px;
+    --heading-font-size: 3rem;
+    --subheading-font-size: 2rem;
 }
 
 .logo {
@@ -25,40 +34,14 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--primary-font);
+            font-size: var(--body-font-size);
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
             text-align: left;
         }
-
-/*         nav {
-            background-color: #005bb5;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2.5px 0;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #003f7f;
-            color: white;
-        } */
 
         .content {
             display: none;
@@ -69,12 +52,13 @@
 
         .content.active {
             display: block;
-        }
+        } 
 
         h1 {
+            font-family: var(--heading-font);
+            font-size: var(--heading-font-size);
             color: var(--primary-color);
             margin-top: 20px;
-            font-size: 2.5rem;
         }
 
         ul {
@@ -92,7 +76,8 @@
         }
 
         p, li {
-            font-size: 18px;
+            font-family: var(--primary-font);
+            font-size: var(--body-font-size);
             line-height: 1.6;
         }
 
@@ -106,6 +91,8 @@
         }
 
         h2 {
+            font-family: var(--heading-font);
+            font-size: var(--subheading-font-size);
             color: var(--primary-color);
             margin-top: 15px;
         }
@@ -114,6 +101,13 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
             gap: 10px; /* Adjust the gap between the columns */
+        }
+
+        .desktop-nav a, .desktop-nav span, .download-button {
+            font-family: var(--secondary-font);
+            color: var(--desktop-header-font-color);
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .language-list li {
