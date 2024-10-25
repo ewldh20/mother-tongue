@@ -1,19 +1,19 @@
 /* Color Variables */
 :root {
-    --primary-color: #005bb5; /* Primary theme color */
-    --secondary-color: #003f7f; /* Darker version of primary for hover effects */
-    --highlight-color: #61E000; /* Accent color */
-    --background-color: white; /* Background color */
-    --text-color: #333; /* Primary text color */
-    --light-background: #e0e7ff; /* Light background for items */
-    --alternate-background: #f5f8ff; /* Alternate background for sections */
-    --alternate-background-light: #dceaff; /* Lighter version for even sections */
-    --button-text-color: #005bb5; /* Button text color */
-    --footer-background: #005bb5; /* Footer background color */
-    --footer-link-color: white; /* Footer link color */
+    --primary-color: #005bb5;
+    --primary-hover-color: #003f7f;
+    --text-color: #333;
+    --background-color: white;
+    --language-background-color: #e0e7ff;
+    --instruction-odd-background-color: #f5f8ff;
+    --instruction-even-background-color: #dceaff;
+    --button-border-color: #005bb5;
+    --footer-background-color: #005bb5;
+    --footer-text-color: white;
+    --mobile-nav-background: #4C8EDB;
 }
 
-/* Refactored CSS */
+/* Applying Variables */
 .logo {
     width: 37px;
     height: 37px;
@@ -31,60 +31,201 @@ body {
     text-align: left;
 }
 
-/* Navigation */
-.desktop-nav, .mobile-nav {
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Links */
-.desktop-nav a, .desktop-nav span, .mobile-nav span, .mobile-nav-links a {
-    color: var(--footer-link-color);
-}
-
-.desktop-nav a:hover, .mobile-nav-links a:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Content and Headings */
 .content {
+    display: none;
     padding: 20px;
-    margin-top: 70px;
+    margin-top: 60px; /* To account for fixed navbar */
+    text-align: left;
 }
 
-h1, h2 {
+.content.active {
+    display: block;
+}
+
+h1 {
     color: var(--primary-color);
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+ol {
+    text-align: left;
+    margin-left: 20px;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+body {
+    margin-bottom: 80px; /* To ensure content isn't hidden behind the footer */
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 15px;
 }
 
 .language-list li {
-    background-color: var(--light-background);
+    background-color: var(--language-background-color);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
 }
 
-/* Instruction Boxes */
 .instruction-box:nth-child(odd) {
-    background-color: var(--alternate-background);
+    background-color: var(--instruction-odd-background-color);
 }
 
 .instruction-box:nth-child(even) {
-    background-color: var(--alternate-background-light);
+    background-color: var(--instruction-even-background-color);
 }
 
-/* Buttons */
-.desktop-nav .download-button, footer .download-button {
-    background-color: var(--alternate-background-light);
-    color: var(--button-text-color);
-    border: 2px solid var(--primary-color);
+.instruction-step {
+    background-color: var(--primary-color);
+    color: var(--footer-text-color);
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.desktop-nav a, .desktop-nav span {
+    color: var(--footer-text-color);
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.desktop-nav a:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.desktop-nav .download-button {
+    background-color: var(--instruction-even-background-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid var(--button-border-color);
+    margin-left: auto;
+    margin: auto;
+}
+
+.desktop-nav .download-button:hover {
+    background-color: var(--instruction-even-background-color);
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.mobile-nav span {
+    color: var(--footer-text-color);
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.mobile-nav .hamburger span {
+    background-color: var(--footer-text-color);
+}
+
+.mobile-nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--mobile-nav-background);
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.mobile-nav-links a, .mobile-nav-links span {
+    color: var(--footer-text-color);
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* Footer */
 footer {
-    background-color: var(--footer-background);
-    color: var(--footer-link-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
+    position: fixed;
+    width: -webkit-fill-available;
+    bottom: 0;
+}
+
+footer .download-button {
+    background-color: var(--instruction-even-background-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 25px;
+    position: absolute;
+    right: 0;
 }
 
 .footer-links a {
-    color: var(--footer-link-color);
+    color: var(--footer-text-color);
+    text-decoration: none;
+    margin: 0 10px;
 }
+
 .footer-links a:hover {
     text-decoration: underline;
 }
