@@ -1,389 +1,90 @@
- .logo {
-            width: 37px;
-            height: 37px;
-            margin: 5px 10px;
-            border-radius: 50%;
-            float: left;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: #333;
-            text-align: left;
-        }
-
-/*         nav {
-            background-color: #005bb5;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2.5px 0;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #003f7f;
-            color: white;
-        } */
-
-        .content {
-            display: none;
-            padding: 20px;
-            margin-top: 60px; /* To account for fixed navbar */
-            text-align: left;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        h1 {
-            color: #005bb5;
-            margin-top: 20px;
-            font-size: 2.5rem;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            padding: 5px 0;
-        }
-
-        ol {
-            text-align: left;
-            margin-left: 20px;
-        }
-
-        p, li {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .container {
-            padding: 50px;
-            text-align: center;
-        }
-
-        body {
-            margin-bottom: 80px; /* To ensure content isn't hidden behind the footer */
-        }
-
-        h2 {
-            color: #005bb5;
-            margin-top: 15px;
-        }
-
-        .language-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-            gap: 10px; /* Adjust the gap between the columns */
-        }
-
-        .language-list li {
-            background-color: #e0e7ff; /* Light background for language items */
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Styling for the instruction boxes */
-        .instruction-box {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .instruction-box:nth-child(odd) {
-            background-color: #f5f8ff; /* Match site theme */
-        }
-
-        .instruction-box:nth-child(even) {
-            background-color: #dceaff; /* Lighter version */
-        }
-
-        .instruction-step {
-            background-color: #005bb5; /* Theme color */
-            color: white;
-            font-size: 1.5rem;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-
-        .instruction-content {
-            flex: 1;
-        }
-
-        .instruction-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .instruction-description {
-            font-size: 1rem;
-            line-height: 1.4;
-        }
-
-        /* Desktop Navigation */
-        .desktop-nav {
-            background-color: #005bb5;
-            display: flex;
-            justify-content: space-between; /* Adjusts space between logo + links and button */
-            align-items: center;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .desktop-nav a, .desktop-nav span {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .desktop-nav a:hover {
-            background-color: #003f7f;
-        }
-        
-        .desktop-nav .menu-items {
-            display: flex;
-            align-items: center;
-        }
-        
-        .desktop-nav .download-button {
-            display: flex;
-            align-items: center;
-            background-color: #dceaff;
-            color: #005bb5;
-            text-decoration: none;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            border: 2px solid #005bb5;
-            margin-left: auto; /* Ensures the download button is pushed to the right */
-            margin: auto;
-        }
-        
-        .desktop-nav .download-button img {
-            width: 40px; /* Set the width to an appropriate size */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the image fits within the given size */
-        }
-
-    
-    .desktop-nav .download-button:hover {
-        background-color: #dceaff; /* Keep the background color the same */
-        color: inherit;            /* Keep the text color the same */
-        cursor: pointer;          
-    }
-    
-    /* Mobile Navigation */
-    .mobile-nav {
-        display: none;
-        background-color: #005bb5;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-    
-    .mobile-nav span {
-        color: white;
-        padding: 10px;
-        text-align: left;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 24px;
-    }
-    
-    .mobile-nav .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 30px; /* Adjust the width of the button */
-        height: 24px; /* Adjust the height for proper spacing between lines */
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        margin-right: 10px; /* Adjust margin if needed */
-    }
-    
-    .mobile-nav .hamburger span {
-        width: 100%; /* Full width for each line */
-        height: 3px; /* Thickness of each line */
-        background-color: white; /* Color of the lines */
-        display: block;
-        border-radius: 2px; /* Adds rounded corners to the lines */
-    }
-    
-    .mobile-nav-links {
-        display: none;
-        flex-direction: column;
-    /*     background-color: #005bb5; */
-        background-color: #4C8EDB;
-        position: absolute; /* Make it positioned relative to the viewport */
-        top: 60px; /* Adjust this value to ensure it appears below the fixed header */
-        width: 100%; /* Make sure it takes up the full width of the screen */
-        z-index: 999; /* Ensure it stays on top of other content */
-        padding: 10px 0;
-    }
-    
-    .mobile-nav-links a, mobile-nav-links span {
-        color: white;
-        padding: 10px;
-        text-align: left;
-        text-decoration: none;
-    /*     font-weight: bold; */
-        font-size: 18px;
-    }
-    
-    .mobile-nav-links.active {
-        display: flex;
-    }
-    
-    /* Media Query for Mobile Navigation */
-    @media (max-width: 768px) {
-        .desktop-nav {
-            display: none;
-        }
-    
-        .mobile-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: -webkit-fill-available;
-        }
-    
-        .mobile-nav-links {
-            display: none; /* Initially hidden */
-        }
-    
-        .mobile-nav-links.active {
-            display: flex; /* Display flex on toggle */
-        }
-     
-         .footer-links {
-            display: flex;
-         }
-     
-         .footer-links a {
-            margin: 0px; /* Remove margins for mobile view */
-            min-width: 100px;
-        }
-        
-        .footer-banner {
-            min-width: 375px; /* Set min-width for footer banner */
-        }
-
-        footer {
-            font-size: smaller;
-        }
-     
-        .copyright {
-            display: block !important;
-        }
-
-        .footer-links {
-            display: flex;
-        }
-     
-    }
-            .content {
-                padding: 20px;
-                margin-top: 70px; /* To account for fixed navbar */
-            }
-    
-    
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background-color: #005bb5;
-        color: white;
-        position: fixed;
-        width: -webkit-fill-available;
-        bottom: 0;
-    }
-    
-    footer .copyright {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 5px;
-        display: flex;
-        align-items: center;
-    }
-    
-    footer .download-button {
-        display: flex;
-        align-items: center;
-        background-color: #dceaff;
-        color: #005bb5;
-        text-decoration: none;
-        border-radius: 20px;
-        font-weight: bold;
-    /*     border: 2px solid #005bb5; */
-        margin-right: 25px; 
-        position: absolute;
-        right: 0;
-    }
-    
-    /* footer .download-button i {
-        scale: 15%;
-    } */
-    
-    footer .download-button img {
-        width: 40px; /* Set the width to an appropriate size */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure the image fits within the given size */
-    }
-
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-    
-    .footer-links a:hover {
-        text-decoration: underline;
+/* Color Variables */
+:root {
+    --primary-color: #005bb5; /* Primary theme color */
+    --secondary-color: #003f7f; /* Darker version of primary for hover effects */
+    --highlight-color: #61E000; /* Accent color */
+    --background-color: white; /* Background color */
+    --text-color: #333; /* Primary text color */
+    --light-background: #e0e7ff; /* Light background for items */
+    --alternate-background: #f5f8ff; /* Alternate background for sections */
+    --alternate-background-light: #dceaff; /* Lighter version for even sections */
+    --button-text-color: #005bb5; /* Button text color */
+    --footer-background: #005bb5; /* Footer background color */
+    --footer-link-color: white; /* Footer link color */
 }
 
-    
+/* Refactored CSS */
+.logo {
+    width: 37px;
+    height: 37px;
+    margin: 5px 10px;
+    border-radius: 50%;
+    float: left;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: left;
+}
+
+/* Navigation */
+.desktop-nav, .mobile-nav {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Links */
+.desktop-nav a, .desktop-nav span, .mobile-nav span, .mobile-nav-links a {
+    color: var(--footer-link-color);
+}
+
+.desktop-nav a:hover, .mobile-nav-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Content and Headings */
+.content {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+.language-list li {
+    background-color: var(--light-background);
+}
+
+/* Instruction Boxes */
+.instruction-box:nth-child(odd) {
+    background-color: var(--alternate-background);
+}
+
+.instruction-box:nth-child(even) {
+    background-color: var(--alternate-background-light);
+}
+
+/* Buttons */
+.desktop-nav .download-button, footer .download-button {
+    background-color: var(--alternate-background-light);
+    color: var(--button-text-color);
+    border: 2px solid var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-link-color);
+}
+
+.footer-links a {
+    color: var(--footer-link-color);
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
