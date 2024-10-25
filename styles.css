@@ -25,7 +25,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white;
+            background-color: var(--background-color);
             color: var(--text-color);
             text-align: left;
         }
@@ -69,7 +69,7 @@
         }
 
         h1 {
-            color: #005bb5;
+            color: var(--primary-color);
             margin-top: 20px;
             font-size: 2.5rem;
         }
@@ -103,7 +103,7 @@
         }
 
         h2 {
-            color: #005bb5;
+            color: var(--primary-color);
             margin-top: 15px;
         }
 
@@ -114,7 +114,7 @@
         }
 
         .language-list li {
-            background-color: #e0e7ff; /* Light background for language items */
+            background-color: var(--language-background-color); /* Light background for language items */
             padding: 10px;
             border-radius: 8px;
             text-align: center;
@@ -131,16 +131,16 @@
         }
 
         .instruction-box:nth-child(odd) {
-            background-color: #f5f8ff; /* Match site theme */
+            background-color: var(--instruction-odd-background-color); /* Match site theme */
         }
 
         .instruction-box:nth-child(even) {
-            background-color: #dceaff; /* Lighter version */
+            background-color: var(--instruction-even-background-color); /* Lighter version */
         }
 
         .instruction-step {
-            background-color: #005bb5; /* Theme color */
-            color: white;
+            background-color: var(--primary-color); /* Theme color */
+            color: var(--background-color);
             font-size: 1.5rem;
             width: 45px;
             height: 45px;
@@ -168,7 +168,7 @@
 
         /* Desktop Navigation */
         .desktop-nav {
-            background-color: #005bb5;
+            background-color: var(--primary-color);
             display: flex;
             justify-content: space-between; /* Adjusts space between logo + links and button */
             align-items: center;
@@ -181,14 +181,14 @@
         }
         
         .desktop-nav a, .desktop-nav span {
-            color: white;
+            color: var(--background-color);
             padding: 14px 20px;
             text-decoration: none;
             font-weight: bold;
         }
         
         .desktop-nav a:hover {
-            background-color: #003f7f;
+            background-color: var(--primary-hover-color);
         }
         
         .desktop-nav .menu-items {
@@ -199,13 +199,13 @@
         .desktop-nav .download-button {
             display: flex;
             align-items: center;
-            background-color: #dceaff;
-            color: #005bb5;
+            background-color: var(--instruction-even-background-color);
+            color: var(--primary-color);
             text-decoration: none;
             padding: 5px 20px;
             border-radius: 20px;
             font-weight: bold;
-            border: 2px solid #005bb5;
+            border: 2px solid var(--primary-color);
             margin-left: auto; /* Ensures the download button is pushed to the right */
             margin: auto;
         }
@@ -218,7 +218,7 @@
 
     
     .desktop-nav .download-button:hover {
-        background-color: #dceaff; /* Keep the background color the same */
+        background-color: var(--instruction-even-background-color); /* Keep the background color the same */
         color: inherit;            /* Keep the text color the same */
         cursor: pointer;          
     }
@@ -226,7 +226,7 @@
     /* Mobile Navigation */
     .mobile-nav {
         display: none;
-        background-color: #005bb5;
+        background-color: var(--primary-color);
         padding: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         position: fixed;
@@ -236,7 +236,7 @@
     }
     
     .mobile-nav span {
-        color: white;
+        color: var(--background-color);
         padding: 10px;
         text-align: left;
         text-decoration: none;
@@ -259,7 +259,7 @@
     .mobile-nav .hamburger span {
         width: 100%; /* Full width for each line */
         height: 3px; /* Thickness of each line */
-        background-color: white; /* Color of the lines */
+        background-color: var(--background-color); /* Color of the lines */
         display: block;
         border-radius: 2px; /* Adds rounded corners to the lines */
     }
@@ -268,7 +268,7 @@
         display: none;
         flex-direction: column;
     /*     background-color: #005bb5; */
-        background-color: #4C8EDB;
+        background-color: var(--mobile-nav-background);
         position: absolute; /* Make it positioned relative to the viewport */
         top: 60px; /* Adjust this value to ensure it appears below the fixed header */
         width: 100%; /* Make sure it takes up the full width of the screen */
@@ -277,7 +277,7 @@
     }
     
     .mobile-nav-links a, mobile-nav-links span {
-        color: white;
+        color: var(--background-color);
         padding: 10px;
         text-align: left;
         text-decoration: none;
@@ -347,8 +347,8 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
-        background-color: #005bb5;
-        color: white;
+        background-color: var(--primary-color);
+        color: var(--background-color);
         position: fixed;
         width: -webkit-fill-available;
         bottom: 0;
@@ -366,8 +366,8 @@
     footer .download-button {
         display: flex;
         align-items: center;
-        background-color: #dceaff;
-        color: #005bb5;
+        background-color: var(--instruction-even-background-color);
+        color: var(--primary-color);
         text-decoration: none;
         border-radius: 20px;
         font-weight: bold;
@@ -392,7 +392,7 @@
     }
     
     .footer-links a {
-        color: white;
+        color: var(--background-color);
         text-decoration: none;
         margin: 0 10px;
     }
