@@ -21,346 +21,339 @@
     </script>
 </head>
 <body>
-<!-- Larger Navigation (Desktop) -->
-<nav class="desktop-nav">
-    <div style="display: flex; align-items: center;">
-        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
-        <!-- <span style="padding-left: 5px;">Mother Tongue</span> -->
-    </div>
-    <div class="menu-items">
+    <!-- Larger Navigation (Desktop) -->
+    <nav class="desktop-nav">
+        <div style="display: flex; align-items: center;">
+            <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
+            <span style="padding-left: 5px;">Mother Tongue</span>
+        </div>
+        <a href="https://www.amazon.co.uk/dp/B0DKWXMQM2/" target="_blank" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
+            <img src="alexa-logo.webp" alt="Download Icon">
+        </a>
+    </nav>
+
+
+
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div style="display: flex; align-items: center;">
+            <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
+            <span>Mother Tongue</span>
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars" style="color: white; font-size: 30px;"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Links that will toggle with the hamburger menu -->
+    <div class="mobile-nav-links" id="mobile-nav-links">
         <a href="#home" onclick="showSection('home')">Welcome</a>
         <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
         <a href="#mother-tongue-mobile" onclick="showSection('mother-tongue-mobile')">Mobile App</a>
-    <!--        <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a> -->
-
+    <!--     <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a> -->
     </div>
-    <a href="https://www.amazon.co.uk/dp/B0DKWXMQM2/" target="_blank" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
-        <img src="alexa-logo.webp" alt="Download Icon">
-    </a>
-</nav>
 
-
-
-
-<!-- Mobile Navigation -->
-<nav class="mobile-nav">
-    <div style="display: flex; align-items: center;">
-        <img src="mother-tongue-logo 108X108.png" alt="Mother Tongue Logo" class="logo">
-        <span>Mother Tongue</span>
+    <div id="home" class="content active">
+        <h1>Welcome to Mother Tongue</h1>
+        <p>Mother Tongue is an AI-driven language practice tool designed to help you unlock your full language potential through real conversations. While apps like Duolingo are great for learning words, true fluency comes from speaking. Scientifically, regular conversation practice builds neural pathways in your brain, helping you think in the language rather than just memorizing vocabulary.</p>
+        <p>I created this app because I used to spend a fortune on tutors every week to practice speaking. Now, with Mother Tongue, I’ve developed a super simple, efficient, and much more affordable solution that can be fit around your schedule.</p>
+        <p>Current languages you can select from:</p>
+        
+        <ul class="language-list">
+            <li>English</li>
+            <li>Spanish</li>
+    <!--         <li>Mandarin</li>
+            <li>French</li>
+            <li>Italian</li>
+            <li>Portuguese</li>
+            <li>Japanese</li>
+            <li>Arabic</li>
+            <li>Turkish</li>
+            <li>Danish</li>
+            <li>Swedish</li>
+            <li>Finnish</li>
+            <li>Norwegian</li>
+            <li>Greek</li>
+            <li>Polish</li>
+            <li>German</li>
+            <li>Thai</li>
+            <li>Hindi</li>
+            <li>Urdu</li> -->
+        </ul>
+        <p>All other languages are also available - but it is experimental and alexa may not recognise the language spoke to it.</p>
     </div>
-    <button class="hamburger" onclick="toggleMobileMenu()">
-        <i class="fas fa-bars" style="color: white; font-size: 30px;"></i>
-    </button>
-</nav>
 
-<!-- Mobile Links that will toggle with the hamburger menu -->
-<div class="mobile-nav-links" id="mobile-nav-links">
-    <a href="#home" onclick="showSection('home')">Welcome</a>
-    <a href="#best-practice" onclick="showSection('best-practice')">How to Use</a>
-    <a href="#mother-tongue-mobile" onclick="showSection('mother-tongue-mobile')">Mobile App</a>
-<!--     <a href="#change-locale" onclick="showSection('change-locale')">Change Alexa's Locale</a> -->
-</div>
-
-<div id="home" class="content active">
-    <h1>Welcome to Mother Tongue</h1>
-    <p>Mother Tongue is an AI-driven language practice tool designed to help you unlock your full language potential through real conversations. While apps like Duolingo are great for learning words, true fluency comes from speaking. Scientifically, regular conversation practice builds neural pathways in your brain, helping you think in the language rather than just memorizing vocabulary.</p>
-    <p>I created this app because I used to spend a fortune on tutors every week to practice speaking. Now, with Mother Tongue, I’ve developed a super simple, efficient, and much more affordable solution that can be fit around your schedule.</p>
-    <p>Current languages you can select from:</p>
-    
-    <ul class="language-list">
-        <li>English</li>
-        <li>Spanish</li>
-<!--         <li>Mandarin</li>
-        <li>French</li>
-        <li>Italian</li>
-        <li>Portuguese</li>
-        <li>Japanese</li>
-        <li>Arabic</li>
-        <li>Turkish</li>
-        <li>Danish</li>
-        <li>Swedish</li>
-        <li>Finnish</li>
-        <li>Norwegian</li>
-        <li>Greek</li>
-        <li>Polish</li>
-        <li>German</li>
-        <li>Thai</li>
-        <li>Hindi</li>
-        <li>Urdu</li> -->
-    </ul>
-    <p>All other languages are also available - but it is experimental and alexa may not recognise the language spoke to it.</p>
-</div>
-
-<!-- Best Practice Section -->
-<div id="best-practice" class="content">
-    <h1>Best Practice for Using Mother Tongue</h1>
-    <div class="instruction-box">
-        <div class="instruction-step">1</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Start the Alexa skill</div>
-            <div class="instruction-description">Say, <strong>"Alexa, open Mother Tongue."</strong></div>
+    <!-- Best Practice Section -->
+    <div id="best-practice" class="content">
+        <h1>Best Practice for Using Mother Tongue</h1>
+        <div class="instruction-box">
+            <div class="instruction-step">1</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Start the Alexa skill</div>
+                <div class="instruction-description">Say, <strong>"Alexa, open Mother Tongue."</strong></div>
+            </div>
         </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">2</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Choose a language</div>
-            <div class="instruction-description">Alexa will ask, <em>"What language would you like to practice?"</em> Respond with a language, such as <strong>“Spanish”</strong>.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">2</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Choose a language</div>
+                <div class="instruction-description">Alexa will ask, <em>"What language would you like to practice?"</em> Respond with a language, such as <strong>“Spanish”</strong>.</div>
+            </div>
         </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">3</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Set the duration</div>
-            <div class="instruction-description">Alexa will ask, <em>"For how long would you like to practice?"</em> Respond with a time such as <strong>"5 minutes"</strong></div>
+        <div class="instruction-box">
+            <div class="instruction-step">3</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Set the duration</div>
+                <div class="instruction-description">Alexa will ask, <em>"For how long would you like to practice?"</em> Respond with a time such as <strong>"5 minutes"</strong></div>
+            </div>
         </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">4</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Choose a topic</div>
-            <div class="instruction-description">Alexa will ask, <em>"What topic would you like to discuss?"</em> Respond with a topic such as <strong>"weekends"</strong></div>
+        <div class="instruction-box">
+            <div class="instruction-step">4</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Choose a topic</div>
+                <div class="instruction-description">Alexa will ask, <em>"What topic would you like to discuss?"</em> Respond with a topic such as <strong>"weekends"</strong></div>
+            </div>
         </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">5</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Begin speaking!</div>
-            <div class="instruction-description">Speak in the selected language and let Alexa guide the conversation in real-time.</div>
-        </div>
-    </div>
-</div>
-
-<!-- New Section for Mother Tongue Mobile with instruction boxes -->
-<div id="mother-tongue-mobile" class="content">
-    <h1>Mother Tongue Mobile App</h1>
-    <p>Enjoy the convenience of using Mother Tongue on your mobile device through the Alexa app. Practice languages wherever you are!</p>
-
-    <h2>Steps to Download the Alexa App on Your Mobile Device:</h2>
-
-    <div class="instruction-box">
-        <div class="instruction-step">1</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Open the App Store</div>
-            <div class="instruction-description">For iPhone users, open the <strong>App Store</strong>. For Android users, open the <strong>Google Play Store</strong>.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">5</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Begin speaking!</div>
+                <div class="instruction-description">Speak in the selected language and let Alexa guide the conversation in real-time.</div>
+            </div>
         </div>
     </div>
 
-    <div class="instruction-box">
-        <div class="instruction-step">2</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Search for Amazon Alexa</div>
-            <div class="instruction-description">In the app store's search bar, type <strong>Amazon Alexa</strong> and tap search.</div>
+    <!-- New Section for Mother Tongue Mobile with instruction boxes -->
+    <div id="mother-tongue-mobile" class="content">
+        <h1>Mother Tongue Mobile App</h1>
+        <p>Enjoy the convenience of using Mother Tongue on your mobile device through the Alexa app. Practice languages wherever you are!</p>
+
+        <h2>Steps to Download the Alexa App on Your Mobile Device:</h2>
+
+        <div class="instruction-box">
+            <div class="instruction-step">1</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Open the App Store</div>
+                <div class="instruction-description">For iPhone users, open the <strong>App Store</strong>. For Android users, open the <strong>Google Play Store</strong>.</div>
+            </div>
         </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">2</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Search for Amazon Alexa</div>
+                <div class="instruction-description">In the app store's search bar, type <strong>Amazon Alexa</strong> and tap search.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">3</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Download the App</div>
+                <div class="instruction-description">Tap the download or install button to get the app on your device.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">4</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Log in to the Alexa App</div>
+                <div class="instruction-description">Once downloaded, open the Alexa app and log in using your Amazon account.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">5</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Navigate to Skills & Games</div>
+                <div class="instruction-description">In the Alexa app, tap the <strong>More</strong> button (three horizontal lines at the bottom-right of the screen) and select <strong>Skills & Games</strong>.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">6</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Search for Mother Tongue</div>
+                <div class="instruction-description">In the Skills & Games section, search for <strong>Mother Tongue</strong> and select it.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">7</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Enable the Skill</div>
+                <div class="instruction-description">Tap <strong>Enable</strong> to activate the Mother Tongue skill on your Alexa app.</div>
+            </div>
+        </div>
+
+        <div class="instruction-box">
+            <div class="instruction-step">8</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Start Practicing</div>
+                <div class="instruction-description">You can now use Mother Tongue on your mobile device! Simply say, <strong>"Alexa, open Mother Tongue"</strong> to begin practicing languages on the go.</div>
+            </div>
+        </div>
+
+        <p>Using the Alexa app on your phone allows you to practice speaking in different languages wherever you are!</p>
     </div>
 
-    <div class="instruction-box">
-        <div class="instruction-step">3</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Download the App</div>
-            <div class="instruction-description">Tap the download or install button to get the app on your device.</div>
+    <!-- Change Locale Section -->
+    <!-- <div id="change-locale" class="content">
+        <h1>How to Change the Locale on Your Alexa</h1>
+        <div class="instruction-box">
+            <div class="instruction-step">1</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Open the Alexa app</div>
+                <div class="instruction-description">Go to the Alexa app on your smartphone or tablet.</div>
+            </div>
         </div>
-    </div>
-
-    <div class="instruction-box">
-        <div class="instruction-step">4</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Log in to the Alexa App</div>
-            <div class="instruction-description">Once downloaded, open the Alexa app and log in using your Amazon account.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">2</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Go to Devices</div>
+                <div class="instruction-description">Tap on the <strong>Devices</strong> icon at the bottom of the screen.</div>
+            </div>
         </div>
-    </div>
-
-    <div class="instruction-box">
-        <div class="instruction-step">5</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Navigate to Skills & Games</div>
-            <div class="instruction-description">In the Alexa app, tap the <strong>More</strong> button (three horizontal lines at the bottom-right of the screen) and select <strong>Skills & Games</strong>.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">3</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Select Echo & Alexa</div>
+                <div class="instruction-description">Choose the <strong>Echo & Alexa</strong> option from the top menu.</div>
+            </div>
         </div>
-    </div>
-
-    <div class="instruction-box">
-        <div class="instruction-step">6</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Search for Mother Tongue</div>
-            <div class="instruction-description">In the Skills & Games section, search for <strong>Mother Tongue</strong> and select it.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">4</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Choose your device</div>
+                <div class="instruction-description">Select the Alexa device you're using for Mother Tongue.</div>
+            </div>
         </div>
-    </div>
-
-    <div class="instruction-box">
-        <div class="instruction-step">7</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Enable the Skill</div>
-            <div class="instruction-description">Tap <strong>Enable</strong> to activate the Mother Tongue skill on your Alexa app.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">5</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Scroll to Language</div>
+                <div class="instruction-description">Scroll down and tap on <strong>Language</strong>.</div>
+            </div>
         </div>
-    </div>
-
-    <div class="instruction-box">
-        <div class="instruction-step">8</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Start Practicing</div>
-            <div class="instruction-description">You can now use Mother Tongue on your mobile device! Simply say, <strong>"Alexa, open Mother Tongue"</strong> to begin practicing languages on the go.</div>
+        <div class="instruction-box">
+            <div class="instruction-step">6</div>
+            <div class="instruction-content">
+                <div class="instruction-title">Select the language</div>
+                <div class="instruction-description">Select the language you want to practice, for example, French or Spanish.</div>
+            </div>
         </div>
-    </div>
+    </div> -->
 
-    <p>Using the Alexa app on your phone allows you to practice speaking in different languages wherever you are!</p>
-</div>
+    <div id="privacy-policy" class="content">
+        <h1>Privacy Policy</h1>
+        <p>At <strong>Mother Tongue</strong>, we are committed to protecting your privacy. We value the trust you place in us and aim to be transparent in our data handling practices. The information collected through your use of this service will be treated with care and stored securely.</p>
 
-<!-- Change Locale Section -->
-<!-- <div id="change-locale" class="content">
-    <h1>How to Change the Locale on Your Alexa</h1>
-    <div class="instruction-box">
-        <div class="instruction-step">1</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Open the Alexa app</div>
-            <div class="instruction-description">Go to the Alexa app on your smartphone or tablet.</div>
-        </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">2</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Go to Devices</div>
-            <div class="instruction-description">Tap on the <strong>Devices</strong> icon at the bottom of the screen.</div>
-        </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">3</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Select Echo & Alexa</div>
-            <div class="instruction-description">Choose the <strong>Echo & Alexa</strong> option from the top menu.</div>
-        </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">4</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Choose your device</div>
-            <div class="instruction-description">Select the Alexa device you're using for Mother Tongue.</div>
-        </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">5</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Scroll to Language</div>
-            <div class="instruction-description">Scroll down and tap on <strong>Language</strong>.</div>
-        </div>
-    </div>
-    <div class="instruction-box">
-        <div class="instruction-step">6</div>
-        <div class="instruction-content">
-            <div class="instruction-title">Select the language</div>
-            <div class="instruction-description">Select the language you want to practice, for example, French or Spanish.</div>
-        </div>
-    </div>
-</div> -->
+        <h2>Data Collection:</h2>
+        <ul>
+            <li><strong>Personal Data:</strong> We may collect personal information, such as your device data, language preferences, and usage patterns. This data is used to improve the user experience, deliver personalized content, and ensure the optimal performance of the service.</li>
+            <li><strong>Conversation Data:</strong> We reserve the right to store conversation-related data to enhance the accuracy of AI responses and improve future interactions. Rest assured, any data we collect will be stored securely and handled with strict confidentiality.</li>
+        </ul>
 
-<div id="privacy-policy" class="content">
-    <h1>Privacy Policy</h1>
-    <p>At <strong>Mother Tongue</strong>, we are committed to protecting your privacy. We value the trust you place in us and aim to be transparent in our data handling practices. The information collected through your use of this service will be treated with care and stored securely.</p>
+        <h2>Data Security:</h2>
+        <p>We take the necessary technical and organizational measures to store and protect your personal and conversation-related data. These measures are in place to safeguard your information from unauthorized access, disclosure, or loss.</p>
 
-    <h2>Data Collection:</h2>
-    <ul>
-        <li><strong>Personal Data:</strong> We may collect personal information, such as your device data, language preferences, and usage patterns. This data is used to improve the user experience, deliver personalized content, and ensure the optimal performance of the service.</li>
-        <li><strong>Conversation Data:</strong> We reserve the right to store conversation-related data to enhance the accuracy of AI responses and improve future interactions. Rest assured, any data we collect will be stored securely and handled with strict confidentiality.</li>
-    </ul>
+        <h2>Data Usage:</h2>
+        <ul>
+            <li>Data collected may be used for improving the performance and accuracy of our language services.</li>
+            <li>Your information will not be shared with third parties unless required by law or necessary for maintaining the service.</li>
+        </ul>
 
-    <h2>Data Security:</h2>
-    <p>We take the necessary technical and organizational measures to store and protect your personal and conversation-related data. These measures are in place to safeguard your information from unauthorized access, disclosure, or loss.</p>
-
-    <h2>Data Usage:</h2>
-    <ul>
-        <li>Data collected may be used for improving the performance and accuracy of our language services.</li>
-        <li>Your information will not be shared with third parties unless required by law or necessary for maintaining the service.</li>
-    </ul>
-
-    <p>By using <strong>Mother Tongue</strong>, you agree to the collection and use of your data as outlined in this privacy policy. We are committed to continuously improving our privacy practices and may update this policy accordingly.</p>
-</div>
-
-
-<div id="terms-of-use" class="content">
-    <h1>Terms of Use</h1>
-    <p>By using the Mother Tongue skill, you agree to the following terms and conditions:</p>
-    <ul>
-        <li>Mother Tongue is intended for personal, non-commercial use only.</li>
-        <li>The skill uses AI to provide language learning conversations, which may occasionally contain inaccuracies or errors. We are not responsible for any mistakes in translations or language guidance provided.</li>
-        <li>User data, such as conversation inputs, may be temporarily processed to improve service quality, but no personal data will be stored permanently.</li>
-        <li>Mother Tongue is suitable for users aged 13 and above. Parental guidance is recommended for younger users.</li>
-        <li>We reserve the right to modify or discontinue the service at any time without notice.</li>
-        <li>Users must ensure their Alexa device is set to the correct locale for the language they wish to practice for optimal performance.</li>
-        <li>By using Mother Tongue, you acknowledge that the AI-generated responses may not always be perfect or fully accurate, and it is intended as a learning aid rather than a certified language course.</li>
-    </ul>
-</div>
-
-<footer>
-    <!-- Copyright in the center -->
-    <div class="copyright">
-        <div class='footer-banner'> 
-            © 2024 Mother Tongue. All Rights Reserved. &nbsp;
-        </div>
-        <div class="footer-links">
-            <a href="#" onclick="showSection('privacy-policy')">Privacy Policy</a> |
-            <a href="#" onclick="showSection('terms-of-use')">Terms of Use</a>
-        </div>
+        <p>By using <strong>Mother Tongue</strong>, you agree to the collection and use of your data as outlined in this privacy policy. We are committed to continuously improving our privacy practices and may update this policy accordingly.</p>
     </div>
 
 
+    <div id="terms-of-use" class="content">
+        <h1>Terms of Use</h1>
+        <p>By using the Mother Tongue skill, you agree to the following terms and conditions:</p>
+        <ul>
+            <li>Mother Tongue is intended for personal, non-commercial use only.</li>
+            <li>The skill uses AI to provide language learning conversations, which may occasionally contain inaccuracies or errors. We are not responsible for any mistakes in translations or language guidance provided.</li>
+            <li>User data, such as conversation inputs, may be temporarily processed to improve service quality, but no personal data will be stored permanently.</li>
+            <li>Mother Tongue is suitable for users aged 13 and above. Parental guidance is recommended for younger users.</li>
+            <li>We reserve the right to modify or discontinue the service at any time without notice.</li>
+            <li>Users must ensure their Alexa device is set to the correct locale for the language they wish to practice for optimal performance.</li>
+            <li>By using Mother Tongue, you acknowledge that the AI-generated responses may not always be perfect or fully accurate, and it is intended as a learning aid rather than a certified language course.</li>
+        </ul>
+    </div>
 
-    <!-- Download Button on the right with a WebP image -->
-    <a href="https://www.amazon.co.uk/dp/B0DKWXMQM2/" target="_blank" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
-        <img src="alexa-logo.webp" alt="Download Icon">
-    </a>
-</footer>
+    <footer>
+        <!-- Copyright in the center -->
+        <div class="copyright">
+            <div class='footer-banner'> 
+                © 2024 Mother Tongue. All Rights Reserved. &nbsp;
+            </div>
+            <div class="footer-links">
+                <a href="#" onclick="showSection('privacy-policy')">Privacy Policy</a> |
+                <a href="#" onclick="showSection('terms-of-use')">Terms of Use</a>
+            </div>
+        </div>
 
-<script>
+
+
+        <!-- Download Button on the right with a WebP image -->
+        <a href="https://www.amazon.co.uk/dp/B0DKWXMQM2/" target="_blank" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
+            <img src="alexa-logo.webp" alt="Download Icon">
+        </a>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNavLinks = document.getElementById('mobile-nav-links');
+            mobileNavLinks.classList.toggle('active');
+        }
+        
+        // Hide menu when a link is clicked
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileNavLinks = document.getElementById('mobile-nav-links');
+                mobileNavLinks.classList.remove('active'); // Hide the menu
+            });
+        });
+        
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const mobileNavLinks = document.getElementById('mobile-nav-links');
+            const isClickInside = mobileNavLinks.contains(event.target) || event.target.closest('.hamburger');
+            
+            if (!isClickInside) {
+                mobileNavLinks.classList.remove('active'); // Hide the menu
+            }
+        });
+    </script>
+
+    <script>
     function showSection(sectionId) {
         const sections = document.querySelectorAll('.content');
         sections.forEach(section => {
             section.classList.remove('active');
         });
-        document.getElementById(sectionId).classList.add('active');
-    }
-</script>
-<script>
-    function toggleMobileMenu() {
-        const mobileNavLinks = document.getElementById('mobile-nav-links');
-        mobileNavLinks.classList.toggle('active');
-    }
-    
-    // Hide menu when a link is clicked
-    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-        link.addEventListener('click', function() {
-            const mobileNavLinks = document.getElementById('mobile-nav-links');
-            mobileNavLinks.classList.remove('active'); // Hide the menu
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add('active');
+
+        // Scroll adjustment to account for the fixed header
+        const headerHeight = document.querySelector('.desktop-nav').offsetHeight;
+        window.scrollTo({
+            top: sectionToShow.offsetTop - headerHeight,
+            behavior: 'smooth'
         });
-    });
-    
-    // Close mobile menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-        const mobileNavLinks = document.getElementById('mobile-nav-links');
-        const isClickInside = mobileNavLinks.contains(event.target) || event.target.closest('.hamburger');
-        
-        if (!isClickInside) {
-            mobileNavLinks.classList.remove('active'); // Hide the menu
-        }
-    });
-</script>
-
-<script>
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.content');
-    sections.forEach(section => {
-        section.classList.remove('active');
-    });
-    const sectionToShow = document.getElementById(sectionId);
-    sectionToShow.classList.add('active');
-
-    // Scroll adjustment to account for the fixed header
-    const headerHeight = document.querySelector('.desktop-nav').offsetHeight;
-    window.scrollTo({
-        top: sectionToShow.offsetTop - headerHeight,
-        behavior: 'smooth'
-    });
-}
-</script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>

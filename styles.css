@@ -332,6 +332,10 @@
         .footer-links {
             display: flex;
         }
+
+        footer .download-button { 
+            margin-right: 10px; 
+        }
      
     }
 
