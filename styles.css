@@ -350,7 +350,7 @@
         width: -webkit-fill-available;
         bottom: 0;
         border-top: 2px solid var(--desktop-border-color);
-        height: 30px;
+        height: 20px;
     }
     
     footer .copyright {
