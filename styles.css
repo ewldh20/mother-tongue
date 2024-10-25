@@ -13,7 +13,7 @@
     --footer-text-color: #1CAFF6;
     --mobile-nav-background: white;
     --desktop-header-color: white;
-    --desktop-header-font-color: #1CAFF6;
+    --header-font-color: #1CAFF6;
     --desktop-border-color: #E5E5E5;
 
     /* Font Variables */
@@ -97,7 +97,7 @@
         }
 
         .desktop-nav a, .desktop-nav span, .download-button {
-            color: var(--desktop-header-font-color);
+            color: var(--header-font-color);
             font-weight: 500;
             text-decoration: none;
         }
@@ -173,7 +173,7 @@
         }
         
         .desktop-nav a, .desktop-nav span {
-            color: var(--desktop-header-font-color);
+            color: var(--header-font-color);
             padding: 14px 20px;
             text-decoration: none;
         }
@@ -224,7 +224,7 @@
     }
     
     .mobile-nav span {
-        color: var(--background-color);
+        color: var(--header-font-color);
         padding: 10px;
         text-align: left;
         text-decoration: none;
