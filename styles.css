@@ -171,11 +171,11 @@
             display: flex;
             justify-content: space-between; /* Adjusts space between logo + links and button */
             align-items: center;
-            padding: 10px;
+            padding: 0 5%;
             padding-bottom: 0;
             position: fixed;
             top: 0;
-            width: 100%;
+            width: 90%;
             z-index: 1000;
         }
         
@@ -204,8 +204,6 @@
             padding: 5px 20px;
             border-radius: 20px;
             font-weight: bold;
-            margin-left: auto; /* Ensures the download button is pushed to the right */
-            margin: auto;
         }
         
         .desktop-nav .download-button img {
