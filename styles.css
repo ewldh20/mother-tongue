@@ -81,7 +81,7 @@
         }
 
         body {
-            margin-bottom: 80px; /* To ensure content isn't hidden behind the footer */
+            margin-bottom: 65px; /* To ensure content isn't hidden behind the footer */
             scroll-snap-type: y mandatory;
         }
 
