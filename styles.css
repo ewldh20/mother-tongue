@@ -458,6 +458,10 @@
             width: 200px;
         }
 
+        .right-side {
+            display: grid;
+        }
+
         .right-side .flags-icon {
             justify-self: center;
         }
