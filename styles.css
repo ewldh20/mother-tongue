@@ -176,7 +176,6 @@
         
         .desktop-nav a, .desktop-nav span {
             color: var(--header-font-color);
-            padding: 14px 20px;
             text-decoration: none;
         }
         
