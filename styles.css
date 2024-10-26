@@ -381,12 +381,12 @@
     background-color: var(--primary-color);
     border-top: 1px solid var(--desktop-border-color);
     border-bottom: 1px solid var(--desktop-border-color);
-    padding: 10px;
     z-index: 10; 
     display: flex;
     justify-content: center;
     display: block;
     justify-items: center;
+    /* height: 70px; */
 }
 
 .language-footer .language-list {
