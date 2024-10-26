@@ -180,9 +180,9 @@
             text-decoration: none;
         }
         
-        .desktop-nav a:hover {
+        /* .desktop-nav a:hover {
             border-bottom: 2px solid var(--primary-hover-color);
-        }
+        } */
         
         .desktop-nav .menu-items {
             display: flex;
