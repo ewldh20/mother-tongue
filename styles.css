@@ -301,6 +301,11 @@
         text-align: left;
         align-content: center;
     }
+
+    .language-flag{
+        height: auto;
+        width: 100px;
+    }
     
     footer {
         display: flex;
