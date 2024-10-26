@@ -289,61 +289,9 @@
     .mobile-nav-links.active {
         display: flex;
     }
-    
-    /* Media Query for Mobile Navigation */
-    @media (max-width: 768px) {
-        .desktop-nav {
-            display: none;
-        }
-    
-        .mobile-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: -webkit-fill-available;
-        }
-    
-        .mobile-nav-links {
-            display: none; /* Initially hidden */
-        }
-    
-        .mobile-nav-links.active {
-            display: flex; /* Display flex on toggle */
-        }
 
-        .content{
-            padding: 0 35px !important;
-        }
-     
-         .footer-links {
-            display: flex;
-         }
-     
-         .footer-links a {
-            margin: 0px; /* Remove margins for mobile view */
-            min-width: 100px;
-        }
-        
-        .footer-banner {
-            min-width: 375px; /* Set min-width for footer banner */
-        }
-
-        footer {
-            font-size: smaller;
-        }
-     
-        .copyright {
-            display: block !important;
-        }
-
-        .footer-links {
-            display: flex;
-        }
-
-        footer .download-button { 
-            margin-right: 10px !important; 
-        }
-     
+    .section-holder {
+        display: flex;
     }
 
     .content {
@@ -418,3 +366,62 @@
     .footer-links a:hover {
         text-decoration: underline;
 }
+
+    /* Media Query for Mobile Navigation */
+    @media (max-width: 768px) {
+        .desktop-nav {
+            display: none;
+        }
+    
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: -webkit-fill-available;
+        }
+    
+        .mobile-nav-links {
+            display: none; /* Initially hidden */
+        }
+    
+        .mobile-nav-links.active {
+            display: flex; /* Display flex on toggle */
+        }
+
+        .content{
+            padding: 0 35px !important;
+        }
+     
+         .footer-links {
+            display: flex;
+         }
+     
+         .footer-links a {
+            margin: 0px; /* Remove margins for mobile view */
+            min-width: 100px;
+        }
+        
+        .footer-banner {
+            min-width: 375px; /* Set min-width for footer banner */
+        }
+
+        footer {
+            font-size: smaller;
+        }
+     
+        .copyright {
+            display: block !important;
+        }
+
+        .footer-links {
+            display: flex;
+        }
+
+        footer .download-button { 
+            margin-right: 10px !important; 
+        }
+
+        .section-holder {
+            display: block;
+        }
+    }
