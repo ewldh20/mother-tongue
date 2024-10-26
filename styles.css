@@ -372,6 +372,40 @@
         text-decoration: underline;
 }
 
+.language-footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid var(--desktop-border-color);
+    background-color: var(--footer-background-color);
+}
+
+.language-footer .language-list {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-footer .language-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.language-footer .language-flag {
+    width: 35px;
+    height: auto;
+    border-radius: 5px; /* Adds a rounded style similar to the example */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
     /* Media Query for Mobile Navigation */
     @media (max-width: 768px) {
         .desktop-nav {
