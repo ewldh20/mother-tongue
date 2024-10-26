@@ -51,6 +51,7 @@
             color: var(--primary-color);
             margin-top: 20px;
             font-weight: 600;
+            margin: 0;
         }
 
         ul {
