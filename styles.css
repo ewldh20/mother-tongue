@@ -374,13 +374,13 @@
 
 .language-footer {
     position: fixed;
-    bottom: 40px; /* Adjust this to position above the main footer */
+    bottom: 60px; 
     left: 0;
     width: 100%;
     background-color: var(--footer-background-color);
     border-top: 1px solid var(--desktop-border-color);
     padding: 10px;
-    z-index: 10; /* Ensures it stays on top of other elements */
+    z-index: 10; 
     display: flex;
     justify-content: center;
 }
