@@ -21,10 +21,20 @@
     --secondary-font: 'Roboto', sans-serif;
     --heading-font: 'Fredoka', sans-serif;
     --header-font: 'Fredoka', sans-serif;
-    --header-font-size: 2.5rem;
+    --header-font-size: 2rem;
     --body-font-size: 18px;
-    --heading-font-size: 3rem;
+    --heading-font-size: 2.5rem;
     --subheading-font-size: 2rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    :root {
+        --header-font-size: 2.5rem; /* Smaller header font size */
+        --body-font-size: 16px; /* Smaller body font size for mobile */
+        --heading-font-size: 2.5rem;
+        --subheading-font-size: 1.8rem;
+    }
 }
 
 .logo {
@@ -230,7 +240,7 @@
         text-align: left;
         text-decoration: none;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: var(--header-font-size);
     }
     
     .mobile-nav .hamburger {
