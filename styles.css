@@ -418,6 +418,10 @@
     height: auto;
 }
 
+.language-footer-disclaimer{
+    font-size: small;
+}
+
     /* Media Query for Mobile Navigation */
     @media (max-width: 768px) {
         .desktop-nav {
