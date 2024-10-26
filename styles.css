@@ -335,6 +335,7 @@
         min-height: calc(100vh - 140px); /* Each section takes up the full viewport height */
         padding: 0 80px;
         text-align: left;
+        align-content: center;
     }
     
     footer {
