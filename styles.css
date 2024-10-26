@@ -373,11 +373,16 @@
 }
 
 .language-footer {
+    position: fixed;
+    bottom: 40px; /* Adjust this to position above the main footer */
+    left: 0;
+    width: 100%;
+    background-color: var(--footer-background-color);
+    border-top: 1px solid var(--desktop-border-color);
+    padding: 10px;
+    z-index: 10; /* Ensures it stays on top of other elements */
     display: flex;
     justify-content: center;
-    padding: 10px;
-    border-top: 1px solid var(--desktop-border-color);
-    background-color: var(--footer-background-color);
 }
 
 .language-footer .language-list {
@@ -402,8 +407,8 @@
 .language-footer .language-flag {
     width: 35px;
     height: auto;
-    border-radius: 5px; /* Adds a rounded style similar to the example */
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
     /* Media Query for Mobile Navigation */
