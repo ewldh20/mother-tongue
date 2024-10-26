@@ -300,7 +300,7 @@
         }
 
         .content{
-            padding: 0 35px;
+            padding: 0 35px !important;
         }
      
          .footer-links {
