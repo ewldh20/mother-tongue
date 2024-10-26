@@ -382,7 +382,7 @@
     } */
     
     footer .download-button img {
-        width: 40px; /* Set the width to an appropriate size */
+        width: 53px; /* Set the width to an appropriate size */
         height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure the image fits within the given size */
     }
