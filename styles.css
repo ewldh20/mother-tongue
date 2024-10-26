@@ -3,7 +3,7 @@
     /* Color Variables */
     --primary-color: #1CAFF6;
     --primary-hover-color: #1CAFF6;
-    --text-color: #333333;
+    --text-color: #808080;
     --background-color: white;
     --language-background-color: #e0e7ff;
     --instruction-odd-background-color: #f5f8ff;
@@ -216,7 +216,6 @@
         display: none;
         background-color: var(--mobile-nav-background);
         border-bottom: 2px solid var(--desktop-border-color);
-        padding: 10px;
         position: fixed;
         top: 0;
         width: 100%;
