@@ -298,6 +298,10 @@
         .mobile-nav-links.active {
             display: flex; /* Display flex on toggle */
         }
+
+        .content{
+            padding: 0 35px;
+        }
      
          .footer-links {
             display: flex;
