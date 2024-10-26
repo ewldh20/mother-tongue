@@ -295,12 +295,10 @@
                 © 2024 Mother Tongue. All Rights Reserved. &nbsp;
             </div>
             <div class="footer-links">
-                <a href="#" onclick="showSection('privacy-policy')">Privacy Policy</a> |
-                <a href="#" onclick="showSection('terms-of-use')">Terms of Use</a>
+                <a href="/terms-of-use" onclick="showSection('privacy-policy')">Privacy Policy</a> |
+                <a href="/privacy-policy"" onclick="showSection('terms-of-use')">Terms of Use</a>
             </div>
-        </div>
-
-
+        </div> 
 
         <!-- Download Button on the right with a WebP image -->
         <a href="https://www.amazon.co.uk/dp/B0DKWXMQM2/" target="_blank" aria-label="Download the Mother Tongue Alexa Skill" class="download-button">
@@ -308,57 +306,7 @@
         </a>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.content');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
-    <script>
-        function toggleMobileMenu() {
-            const mobileNavLinks = document.getElementById('mobile-nav-links');
-            mobileNavLinks.classList.toggle('active');
-        }
-        
-        // Hide menu when a link is clicked
-        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                const mobileNavLinks = document.getElementById('mobile-nav-links');
-                mobileNavLinks.classList.remove('active'); // Hide the menu
-            });
-        });
-        
-        // Close mobile menu when clicking outside of it
-        document.addEventListener('click', function(event) {
-            const mobileNavLinks = document.getElementById('mobile-nav-links');
-            const isClickInside = mobileNavLinks.contains(event.target) || event.target.closest('.hamburger');
-            
-            if (!isClickInside) {
-                mobileNavLinks.classList.remove('active'); // Hide the menu
-            }
-        });
-    </script>
-
-    <script>
-    function showSection(sectionId) {
-        const sections = document.querySelectorAll('.content');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-        const sectionToShow = document.getElementById(sectionId);
-        sectionToShow.classList.add('active');
-
-        // Scroll adjustment to account for the fixed header
-        const headerHeight = document.querySelector('.desktop-nav').offsetHeight;
-        window.scrollTo({
-            top: sectionToShow.offsetTop - headerHeight,
-            behavior: 'smooth'
-        });
-    }
-    </script>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
