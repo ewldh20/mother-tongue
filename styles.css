@@ -387,11 +387,12 @@
     display: block;
     justify-items: center;
     /* height: 70px; */
+    padding-bottom: 10px;
 }
 
 .language-footer .language-list {
     display: flex;
-    gap: 15px;
+    /* gap: 15px; */
     align-items: center;
     list-style: none;
     padding: 0;
