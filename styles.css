@@ -332,7 +332,7 @@
     .content {
         scroll-snap-align: start;
         min-height: calc(100vh - 140px); /* Each section takes up the full viewport height */
-        padding: 0 140px;
+        padding: 0 80px;
         margin-top: 79px; 
         text-align: left;
     }
