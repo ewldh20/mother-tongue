@@ -390,7 +390,7 @@
     display: flex;
     justify-content: center;
     display: block;
-    justify-items: center;
+    place-items: center;
     /* height: 70px; */
     padding-bottom: 10px;
 }
